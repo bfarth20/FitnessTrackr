@@ -35,7 +35,7 @@ export function ApiProvider({ children }) {
 
   /** Stores the provided query function for a given tag */
   const provideTag = (tag, query) => {
-    setTags({ ...tags, [tag]: query });
+    setTags((prev) => ({ ...prev, [tag]: query }));
   };
 
   /** Calls all query functions associated with the given tags */
